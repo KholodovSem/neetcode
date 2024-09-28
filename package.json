@@ -1,0 +1,10 @@
+{
+  "name": "neetcode-dsa",
+  "version": "1.0.0",
+  "author": "Kholodov Sem <kholodovsem@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "test": "node --test \"**/*.test.js\" \"**/*.spec.js\"",
+    "test:watch": "node --test --watch \"**/*.test.js\" \"**/*.spec.js\""
+  }
+}
