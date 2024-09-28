@@ -3,3 +3,6 @@ node_modules
 
 # IDE and Editor Configurations
 .vscode
+
+# GITHUB
+.github
