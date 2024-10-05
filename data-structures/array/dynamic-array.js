@@ -24,3 +24,7 @@ class DynamicArray extends StaticArray {
 }
 
 module.exports = DynamicArray;
+
+//TODO: Write jsdoc
+//TODO: Write tests
+//TODO: Exercises

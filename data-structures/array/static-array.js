@@ -88,3 +88,7 @@ class StaticArray {
 }
 
 module.exports = StaticArray;
+
+//TODO: Write jsdoc
+//TODO: Write tests
+//TODO: Exercises
