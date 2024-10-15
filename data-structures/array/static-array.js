@@ -1,6 +1,16 @@
 const util = require("util");
 
+/**
+ * @class StaticArray
+ *
+ * @classdesc
+ * A fixed-size array implementation with dynamic insertion and removal methods.
+ */
 class StaticArray {
+  /**
+   * Creates an instance of StaticArray with a specified capacity.
+   * @param {number} size - The maximum number of elements the array can hold.
+   */
   constructor(size) {
     this._arr = new Array(size);
     this._capacity = size;
@@ -29,6 +39,13 @@ class StaticArray {
     });
   }
 
+  /**
+   * Inserts a value at the specified index in the array.
+   * @param {number} i - The index at which to insert the value.
+   * @param {*} v - The value to insert.
+   * @returns {number} - The new size of the array after insertion.
+   * @complexity O(n) - Linear time complexity due to shifting elements.
+   */
   insertAt(i, v) {
     if (!(i < 0 || i > this._capacity - 1) && this._size < this._capacity) {
       for (let j = this._size; j >= i; j--) {
@@ -42,14 +59,31 @@ class StaticArray {
     return this._size;
   }
 
+  /**
+   * Inserts a value at the start of the array.
+   * @param {*} v - The value to insert at the start.
+   * @returns {number} - The new size of the array after insertion.
+   * @complexity O(n) - Linear time complexity due to shifting elements.
+   */
   insertAtStart(v) {
     return this.insertAt(0, v);
   }
 
+  /**
+   * Inserts a value at the end of the array.
+   * @param {*} v - The value to insert at the end.
+   * @returns {number} - The new size of the array after insertion.
+   * @complexity O(1) - Constant time complexity.
+   */
   insertAtEnd(v) {
     return this.insertAt(this._size, v);
   }
 
+  /**
+   * Removes and returns the last element from the array.
+   * @returns {*} - The removed element, or undefined if the array is empty.
+   * @complexity O(1) - Constant time complexity.
+   */
   pop() {
     if (!this._size) return undefined;
 
@@ -60,14 +94,26 @@ class StaticArray {
     return lastElement;
   }
 
+  /**
+   * Gets the current number of elements in the array.
+   * @returns {number} - The size of the array.
+   */
   size() {
     return this._size;
   }
 
+  /**
+   * Gets the maximum number of elements the array can hold.
+   * @returns {number} - The capacity of the array.
+   */
   capacity() {
     return this._capacity;
   }
 
+  /**
+   * Converts the array to a string representation.
+   * @returns {string} - The string representation of the array.
+   */
   toString() {
     let str = "";
 
@@ -82,13 +128,13 @@ class StaticArray {
     return "[" + str + "]";
   }
 
+  /**
+   * Custom inspect method for debugging.
+   * @returns {string} - The string representation of the array for debugging.
+   */
   [util.inspect.custom]() {
     return this.toString();
   }
 }
 
 module.exports = StaticArray;
-
-//TODO: Write jsdoc
-//TODO: Write tests
-//TODO: Exercises
