@@ -4,7 +4,7 @@ const assert = require("node:assert/strict");
 const Stack = require("./stack");
 
 describe("Stack data structure", () => {
-  describe('"push" method', () => {
+  describe("push", () => {
     it("should add an element to the top of the stack", () => {
       const stack = new Stack();
       stack.push(1);
@@ -22,7 +22,7 @@ describe("Stack data structure", () => {
     });
   });
 
-  describe('"pop" method', () => {
+  describe("pop", () => {
     it("should return the top element of the stack", () => {
       const stack = new Stack();
       stack.push(1);
@@ -37,8 +37,7 @@ describe("Stack data structure", () => {
       const stack = new Stack();
       stack.push(1);
       stack.push(2);
-
-      const popped = stack.pop();
+      stack.pop();
 
       assert.equal(stack.elements.length, 1);
     });
@@ -68,7 +67,7 @@ describe("Stack data structure", () => {
     });
   });
 
-  describe('"peek" method', () => {
+  describe("peek", () => {
     it("should return the top element", () => {
       const stack = new Stack();
       stack.push(1);
@@ -97,7 +96,7 @@ describe("Stack data structure", () => {
     });
   });
 
-  describe('"isEmpty" method', () => {
+  describe("isEmpty", () => {
     it("should return false when the stack isn't empty", () => {
       const stack = new Stack();
       stack.push(1);
@@ -114,7 +113,7 @@ describe("Stack data structure", () => {
     });
   });
 
-  describe('"size" method', () => {
+  describe("size", () => {
     it("should return amount of stack elements", () => {
       const stack = new Stack();
       stack.push(1);

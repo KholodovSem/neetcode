@@ -6,7 +6,7 @@ const MinStack = require("./min-stack");
 const { InvalidArgumentError } = require("../utils/errors");
 
 describe("MinStack - Modified Stack that works with only numbers", () => {
-  describe('"push" must accept only number as argument', () => {
+  describe("push", () => {
     it('should throw an "Invalid argument" error', () => {
       const minStack = new MinStack();
 
@@ -24,7 +24,7 @@ describe("MinStack - Modified Stack that works with only numbers", () => {
     });
   });
 
-  describe('"getMin" return minimal number in the stack', () => {
+  describe("getMin", () => {
     it("should return undefined when the stack is empty", () => {
       const minStack = new MinStack();
 

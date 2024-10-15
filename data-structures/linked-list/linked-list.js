@@ -200,6 +200,4 @@ class LinkedList {
   }
 }
 
-//TODO: Write notion about linked list
-
 module.exports = LinkedList;
