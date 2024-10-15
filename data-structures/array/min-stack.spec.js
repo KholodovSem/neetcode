@@ -1,5 +1,5 @@
-const assert = require("node:assert");
 const { describe, it } = require("node:test");
+const assert = require("node:assert/strict");
 
 const MinStack = require("./min-stack");
 
